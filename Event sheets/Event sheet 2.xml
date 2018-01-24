@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 2</name>
+    <events>
+        <event-block sid="769988454592276">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="806756880339016" type="System" />
+            </conditions>
+            <actions>
+                <action id="-5" name="Set width" sid="771176592811984" type="loading">
+                    <param id="0" name="Width">loadingprogress * 814</param>
+                </action>
+                <action id="0" name="Set text" sid="261374471640847" type="Percentage">
+                    <param id="0" name="Text">round(loadingprogress * 100)  &amp; &quot; %&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="211681123642087">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="401767296320094" type="System">
+                    <param id="0" name="First value">loadingprogress</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Second value">0.99</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="586811374309526" type="System">
+                    <param id="0" name="Seconds">5</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="346229234588663" type="System">
+                    <param id="0" name="Layout">Layout 1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

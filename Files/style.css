@@ -1,0 +1,42 @@
+#ListboxMinute
+{
+	color:lime;
+	background:transparent;
+	padding-left:5px;
+	padding-top:3px;
+	border:1px solid lime;
+}
+
+#ListboxMinute::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+	background-color: lime;
+	border-radius: 2px;
+}
+
+#ListboxMinute::-webkit-scrollbar
+{
+	width: 5px;
+	background-color: lime;
+}
+
+#ListboxMinute::-webkit-scrollbar-thumb
+{
+	border-radius: 2px;
+	background-color: lime;
+	background-image: -webkit-linear-gradient(top, #e4f5fc 0%, #bfe8f9 50%, #9fd8ef 51%, #2ab0ed 100%);
+}
+
+#UserText
+{
+	border: 1px solid lime;
+	padding-left:5px;
+}
+
+TextBoxOut
+{
+	color:lima;
+	background:transparent;
+	vertical-align:middle;
+	align:center;
+}

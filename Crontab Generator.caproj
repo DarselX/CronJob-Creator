@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Crontab Generator</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author>darselx</author>
+    <author-email>darselx@gamer-stammtisch.de</author-email>
+    <author-website>http://darselx-gaming.ddnss.de</author-website>
+    <app-id>de.gamer-stammtisch.www</app-id>
+    <unique-id>27iuuusb2qq4b</unique-id>
+    <saved-with-version>23900</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra Edited By HMMG" id="FlatButton" version="1.399999976">FlatUi Button</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="List" version="1">List</plugin>
+        <plugin author="Gregory Georges" id="Multiline" version="1.139999986">Multiline box</plugin>
+        <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra (default) | Gregory Georges (v1.0) | PlayLive (v2.0)" id="TextBoxAddon" version="1.919999957">Text box addon</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Wastrel" id="wastrel_switchcase" version="1">SwitchCase</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+    </used-behaviors>
+    <used-effects>
+        <effect author="Evan Wallace" id="colorhalftone">Color halftone</effect>
+        <effect author="Scirra" id="glowhorizontal">Glow Horizontal</effect>
+        <effect author="Scirra" id="glowvertical">Glow Vertical</effect>
+        <effect author="Scirra" id="pixellate">Pixellate</effect>
+        <effect author="Danguafer/Silexars" id="pulse">Pulse</effect>
+        <effect author="Brad Larson" id="radialpixellate">Radial pixellate</effect>
+        <effect author="Scirra" id="scanlines">Scan lines</effect>
+        <effect author="Scirra" id="setcolor">Set color</effect>
+        <effect author="Scirra" id="warp">Warp</effect>
+    </used-effects>
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1920</width>
+        <height>1080</height>
+    </window-size>
+    <pixel-rounding>1</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>Loading</first-layout>
+    <use-loader-layout>1</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">High quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-folder name="Texte">
+            <object-type name="CrontabGenerator" sid="771980214615631">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="993156878389507">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <effects>
+                    <effect-type name="ColorHalftone">
+                        <effect id="colorhalftone" />
+                    </effect-type>
+                    <effect-type name="GlowHorizontal">
+                        <effect id="glowhorizontal" />
+                    </effect-type>
+                    <effect-type name="GlowVertical">
+                        <effect id="glowvertical" />
+                    </effect-type>
+                    <effect-type name="GlowHorizontal2">
+                        <effect id="glowhorizontal" />
+                    </effect-type>
+                    <effect-type name="GlowVertical2">
+                        <effect id="glowvertical" />
+                    </effect-type>
+                    <effect-type name="RadialPixellate">
+                        <effect id="radialpixellate" />
+                    </effect-type>
+                    <effect-type name="Warp">
+                        <effect id="warp" />
+                    </effect-type>
+                    <effect-type name="ScanLines">
+                        <effect id="scanlines" />
+                    </effect-type>
+                </effects>
+            </object-type>
+            <object-type name="Ueberschrift" sid="746320342686674">
+                <plugin id="TextBoxAddon" />
+                <instance-variables>
+                    <instance-variable name="Inhalt" sid="770554681327403" type="string" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Pin" sid="755231807045724">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="Output" sid="737824797816733">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="Output2" sid="366813441912248">
+                <plugin id="Multiline" />
+            </object-type>
+        </object-folder>
+        <object-folder name="Images">
+            <object-type name="Trenner" sid="116568200509919">
+                <plugin id="Sprite" />
+                <effects>
+                    <effect-type name="SetColor">
+                        <effect id="setcolor" />
+                    </effect-type>
+                    <effect-type name="ColorHalftone">
+                        <effect id="colorhalftone" />
+                    </effect-type>
+                    <effect-type name="GlowHorizontal">
+                        <effect id="glowhorizontal" />
+                    </effect-type>
+                    <effect-type name="GlowVertical">
+                        <effect id="glowvertical" />
+                    </effect-type>
+                    <effect-type name="Pixellate">
+                        <effect id="pixellate" />
+                    </effect-type>
+                    <effect-type name="ScanLines">
+                        <effect id="scanlines" />
+                    </effect-type>
+                    <effect-type name="Pulse">
+                        <effect id="pulse" />
+                    </effect-type>
+                </effects>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="580606543230537" speed="5">
+                        <frame duration="1" hotspotX="0.501312" hotspotY="0.586957" original-source="C:\Users\haas071\Pictures\trenner.png">
+                            <collision-poly>
+                                <point x="0.0656168" y="0.434783" />
+                                <point x="0.501312" y="0.304348" />
+                                <point x="0.934383" y="0.456522" />
+                                <point x="0.994751" y="0.586957" />
+                                <point x="0.905512" y="0.478261" />
+                                <point x="0.501312" y="0.695652" />
+                                <point x="0.0971129" y="0.478261" />
+                                <point x="0.00262467" y="0.586957" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Window" sid="430262749362283">
+                <plugin id="NinePatch" />
+                <effects>
+                    <effect-type name="SetColor">
+                        <effect id="setcolor" />
+                    </effect-type>
+                </effects>
+                <texture original-source="C:\Users\haas071\Dropbox\Decrypt Sim\mats\neon_space_rainmeter___2_4___29_09_2017__by_99villages-d7banug\Skins\Neon Space\@resources\images\Browser\NBG.png" />
+            </object-type>
+            <object-type name="Top" sid="317160873364830">
+                <plugin id="NinePatch" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="745642996913722">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <effects>
+                    <effect-type name="SetColor">
+                        <effect id="setcolor" />
+                    </effect-type>
+                </effects>
+                <texture original-source="C:\Users\haas071\Dropbox\Decrypt Sim\mats\neon_space_rainmeter___2_4___29_09_2017__by_99villages-d7banug\Skins\Neon Space\@resources\images\CoreMemoBatWifi\Bar.png" />
+            </object-type>
+            <object-type name="Ok" sid="385701703399275">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="866306131242488" speed="5">
+                        <frame duration="1" hotspotX="0.502222" hotspotY="0.502222" original-source="C:\Users\haas071\Pictures\ok1.png">
+                            <collision-poly>
+                                <point x="0.146667" y="0.146667" />
+                                <point x="0.497778" y="0" />
+                                <point x="0.853333" y="0.146667" />
+                                <point x="1" y="0.497778" />
+                                <point x="0.853333" y="0.853333" />
+                                <point x="0.497778" y="1" />
+                                <point x="0.146667" y="0.853333" />
+                                <point x="0" y="0.497778" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.502222" hotspotY="0.502222" original-source="C:\Users\haas071\Pictures\ok2.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Sprite" sid="895375776420151">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="694003830581196" speed="5">
+                        <frame duration="1" hotspotX="0.492929" hotspotY="0.501199" original-source="C:\Users\haas071\Dropbox\Decrypt Sim\mats\dx-logo1.png">
+                            <collision-poly>
+                                <point x="0.327273" y="0.176259" />
+                                <point x="0.492929" y="0.0107914" />
+                                <point x="0.658586" y="0.176259" />
+                                <point x="0.79798" y="0.5" />
+                                <point x="0.622222" y="0.803357" />
+                                <point x="0.492929" y="0.997602" />
+                                <point x="0.365657" y="0.802158" />
+                                <point x="0.191919" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Controls">
+            <object-folder name="Minuten">
+                <object-type name="Minuten" sid="341557415138475">
+                    <plugin id="List" />
+                </object-type>
+                <object-type name="Minuten2" sid="554403566771910">
+                    <plugin id="List" />
+                </object-type>
+            </object-folder>
+            <object-folder name="Stunden">
+                <object-type name="Stunden" sid="288087410822335">
+                    <plugin id="List" />
+                </object-type>
+                <object-type name="Stunden2" sid="362162762242018">
+                    <plugin id="List" />
+                </object-type>
+            </object-folder>
+            <object-folder name="Tage">
+                <object-type name="Tage" sid="413445314205511">
+                    <plugin id="List" />
+                </object-type>
+                <object-type name="Tage2" sid="380692135725638">
+                    <plugin id="List" />
+                </object-type>
+            </object-folder>
+            <object-folder name="Monate">
+                <object-type name="Monate" sid="637625026295505">
+                    <plugin id="List" />
+                </object-type>
+                <object-type name="Monate2" sid="180293021888350">
+                    <plugin id="List" />
+                </object-type>
+            </object-folder>
+            <object-folder name="Wochentage">
+                <object-type name="Wochentage" sid="108359715280486">
+                    <plugin id="List" />
+                </object-type>
+                <object-type name="Wochentage2" sid="417168108434290">
+                    <plugin id="List" />
+                </object-type>
+            </object-folder>
+            <object-folder name="User">
+                <object-type name="UserName" sid="690409423346617">
+                    <plugin id="TextBoxAddon" />
+                </object-type>
+            </object-folder>
+            <object-folder name="Command">
+                <object-type name="Command" sid="217915509505645">
+                    <plugin id="TextBoxAddon" />
+                </object-type>
+            </object-folder>
+            <object-folder name="Buttons">
+                <object-type name="GenerateButton" sid="107085682493035">
+                    <plugin id="FlatButton" />
+                </object-type>
+                <object-type name="Copy" sid="728019623849465">
+                    <plugin id="FlatButton" />
+                </object-type>
+            </object-folder>
+        </object-folder>
+        <object-folder name="Loader">
+            <object-type name="byDarselX" sid="391078437588439">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="copyright" sid="256855944310257">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="LoadingBarBG" sid="154987667804279">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="985642756742513" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\haas071\Pictures\loadingbar1.png">
+                            <collision-poly>
+                                <point x="0.0526316" y="0.323529" />
+                                <point x="0.5" y="0.0147059" />
+                                <point x="0.947368" y="0.323529" />
+                                <point x="0.997608" y="0.5" />
+                                <point x="0.956938" y="0.735294" />
+                                <point x="0.5" y="0.764706" />
+                                <point x="0.0406699" y="0.75" />
+                                <point x="0.00239234" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="loading" sid="293343834968159">
+                <plugin id="TiledBg" />
+                <texture />
+            </object-type>
+            <object-type name="Percentage" sid="845645321343013">
+                <plugin id="Text" />
+            </object-type>
+        </object-folder>
+        <object-type name="Function" sid="590344965796588">
+            <plugin id="Function" />
+        </object-type>
+        <object-type global="1" name="SwitchCase" sid="324614259956975">
+            <plugin id="wastrel_switchcase" />
+        </object-type>
+        <object-type name="Browser" sid="931781954426130">
+            <plugin id="Browser" />
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Layout 1.xml</layout>
+        <layout>Loading.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>Event sheet 2.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Function" uid="42" />
+        <global-instance type="Browser" uid="52" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+        <file name="style.css" />
+    </files-folder>
+</c2project>

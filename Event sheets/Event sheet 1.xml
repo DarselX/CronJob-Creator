@@ -1,0 +1,1156 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <variable constant="0" name="gStunden" sid="352314636278620" static="0" type="text"></variable>
+        <variable constant="0" name="gTage" sid="909788091639421" static="0" type="text"></variable>
+        <variable constant="0" name="gMinuten" sid="147300417791062" static="0" type="text"></variable>
+        <variable constant="0" name="gWochentag" sid="613745220300471" static="0" type="text"></variable>
+        <variable constant="0" name="gMonate" sid="824642645052460" static="0" type="text"></variable>
+        <variable constant="1" name="MASKE" sid="618225690836500" static="0" type="text">[M] [H] [D] [MONTH] [WEEK] [USER] [CMD]</variable>
+        <event-group description="" sid="652119588036685" title="MainGroup">
+            <sub-events>
+                <event-block sid="943485332893988">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="651166279057930" type="System">
+                            <param id="0" name="Object">Ueberschrift</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="832862004692156" type="Ueberschrift">
+                            <param id="0" name="Text">Ueberschrift.Inhalt</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="178207608689622">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="495052635893792" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="642319893638553" type="Top">
+                            <param id="0" name="Pin to">Window</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="170960866517035" type="Ueberschrift">
+                            <param id="0" name="Pin to">Window</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="783796581648155" type="CrontabGenerator">
+                            <param id="0" name="Pin to">Trenner</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action id="5" name="Set web font" sid="265593588583496" type="CrontabGenerator">
+                            <param id="0" name="Family name">&quot;&quot;</param>
+                            <param id="1" name="CSS URL">&quot;style.css&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="658328534186497" type="Output">
+                            <param id="0" name="Text">MASKE</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="433843715419525">
+                            <conditions>
+                                <condition id="-10" name="For" sid="936957354687704" type="System">
+                                    <param id="0" name="Name">&quot;MinutenLoop&quot;</param>
+                                    <param id="1" name="Start index">0</param>
+                                    <param id="2" name="End index">59</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Add item" sid="342454759416389" type="Minuten2">
+                                    <param id="0" name="Text">&quot;&quot; &amp; loopindex &amp; &quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="574977147209498">
+                            <conditions>
+                                <condition id="-10" name="For" sid="998523822496842" type="System">
+                                    <param id="0" name="Name">&quot;StundenLoop&quot;</param>
+                                    <param id="1" name="Start index">0</param>
+                                    <param id="2" name="End index">23</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Add item" sid="171396134487828" type="Stunden2">
+                                    <param id="0" name="Text">&quot;&quot; &amp; loopindex &amp; &quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="835526335077127">
+                            <conditions>
+                                <condition id="-10" name="For" sid="346181086811778" type="System">
+                                    <param id="0" name="Name">&quot;TageLoop&quot;</param>
+                                    <param id="1" name="Start index">1</param>
+                                    <param id="2" name="End index">31</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Add item" sid="205763081080699" type="Tage2">
+                                    <param id="0" name="Text">&quot;&quot; &amp; loopindex &amp; &quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="116544258167678" title="Focus">
+            <sub-events>
+                <event-group description="" sid="291961499365155" title="Minuten">
+                    <sub-events>
+                        <event-block sid="155480937675597">
+                            <conditions>
+                                <condition id="1" name="On selection changed" sid="171386213538053" type="Minuten" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set selection" sid="947611064019675" type="Minuten2">
+                                    <param id="0" name="Index">-1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="488296342240114">
+                            <conditions>
+                                <condition id="1" name="On selection changed" sid="340642289338368" type="Minuten2" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set selection" sid="242810967166304" type="Minuten">
+                                    <param id="0" name="Index">-1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="467449771747459">
+                            <conditions>
+                                <condition id="2" name="On clicked" sid="164977193578180" type="Minuten" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="987514477073670" type="System">
+                                    <param id="0" name="Variable">gMinuten</param>
+                                    <param id="1" name="Value">Minuten.SelectedText</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="358529007559633">
+                            <conditions>
+                                <condition id="2" name="On clicked" sid="122311140642336" type="Minuten2" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="388652993935099" type="System">
+                                    <param id="0" name="Variable">gMinuten</param>
+                                    <param id="1" name="Value">Minuten2.SelectedText</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="700488055385510" title="Stunden">
+                    <sub-events>
+                        <event-block sid="609402062968962">
+                            <conditions>
+                                <condition id="1" name="On selection changed" sid="913879756797428" type="Stunden" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set selection" sid="161530701416817" type="Stunden2">
+                                    <param id="0" name="Index">-1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="676317808808497">
+                            <conditions>
+                                <condition id="1" name="On selection changed" sid="703048520305317" type="Stunden2" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set selection" sid="841711481248218" type="Stunden">
+                                    <param id="0" name="Index">-1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="223672760426851">
+                            <conditions>
+                                <condition id="2" name="On clicked" sid="600932160113845" type="Stunden" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="260017279241619" type="System">
+                                    <param id="0" name="Variable">gStunden</param>
+                                    <param id="1" name="Value">Stunden.SelectedText</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="616784848380417">
+                            <conditions>
+                                <condition id="2" name="On clicked" sid="852166765562021" type="Stunden2" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="261650606973451" type="System">
+                                    <param id="0" name="Variable">gMinuten</param>
+                                    <param id="1" name="Value">Stunden2.SelectedText</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="199793221917736" title="Tage">
+                    <sub-events>
+                        <event-block sid="293788402825686">
+                            <conditions>
+                                <condition id="1" name="On selection changed" sid="543130569429940" type="Tage" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set selection" sid="809181389937321" type="Tage2">
+                                    <param id="0" name="Index">-1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="742017450392050">
+                            <conditions>
+                                <condition id="1" name="On selection changed" sid="398144344748765" type="Tage2" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set selection" sid="122244377991822" type="Tage">
+                                    <param id="0" name="Index">-1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="506910046505348">
+                            <conditions>
+                                <condition id="2" name="On clicked" sid="895180104182109" type="Tage" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="488278820098296" type="System">
+                                    <param id="0" name="Variable">gTage</param>
+                                    <param id="1" name="Value">Tage.SelectedText</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="584318512458782">
+                            <conditions>
+                                <condition id="2" name="On clicked" sid="774816901132646" type="Tage2" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="736008130981786" type="System">
+                                    <param id="0" name="Variable">gTage</param>
+                                    <param id="1" name="Value">Tage2.SelectedText</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="182211088413031" title="Monate">
+                    <sub-events>
+                        <event-block sid="395677691356986">
+                            <conditions>
+                                <condition id="1" name="On selection changed" sid="178525854040247" type="Monate" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set selection" sid="383457083278590" type="Monate2">
+                                    <param id="0" name="Index">-1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="855912085582671">
+                            <conditions>
+                                <condition id="1" name="On selection changed" sid="919977782063174" type="Monate2" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set selection" sid="433553319525835" type="Monate">
+                                    <param id="0" name="Index">-1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="183020152915776">
+                            <conditions>
+                                <condition id="2" name="On clicked" sid="853027737605266" type="Monate" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="334906984594469" type="System">
+                                    <param id="0" name="Variable">gMonate</param>
+                                    <param id="1" name="Value">Monate.SelectedText</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="799187109264841">
+                            <conditions>
+                                <condition id="2" name="On clicked" sid="955181717514985" type="Monate2" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="215303879444347" type="System">
+                                    <param id="0" name="Variable">gMonate</param>
+                                    <param id="1" name="Value">Monate2.SelectedText</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="966537587040267" title="Wochentage">
+                    <sub-events>
+                        <event-block sid="506418125936728">
+                            <conditions>
+                                <condition id="1" name="On selection changed" sid="456247424779553" type="Wochentage" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set selection" sid="533367083863124" type="Wochentage2">
+                                    <param id="0" name="Index">-1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="206582281284150">
+                            <conditions>
+                                <condition id="1" name="On selection changed" sid="558536235048466" type="Wochentage2" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set selection" sid="481258695648532" type="Wochentage">
+                                    <param id="0" name="Index">-1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="998794585837924">
+                            <conditions>
+                                <condition id="2" name="On clicked" sid="198054816011973" type="Wochentage" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="380725243353421" type="System">
+                                    <param id="0" name="Variable">gWochentag</param>
+                                    <param id="1" name="Value">Wochentage.SelectedText</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="832596053866667">
+                            <conditions>
+                                <condition id="2" name="On clicked" sid="470541877058193" type="Wochentage2" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="835849169428689" type="System">
+                                    <param id="0" name="Variable">gWochentag</param>
+                                    <param id="1" name="Value">Wochentage2.SelectedText</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="413611355654085" title="Generator">
+            <sub-events>
+                <variable constant="0" name="Tage" sid="981528907325987" static="0" type="text"></variable>
+                <variable constant="0" name="Monate" sid="672757899516109" static="0" type="text"></variable>
+                <variable constant="0" name="Stunden" sid="386860747088686" static="0" type="text"></variable>
+                <variable constant="0" name="Minuten" sid="675971442305781" static="0" type="text"></variable>
+                <variable constant="0" name="Wochentag" sid="607391449300704" static="0" type="text"></variable>
+                <variable constant="0" name="UserName" sid="874927581739533" static="0" type="text"></variable>
+                <variable constant="0" name="Command" sid="305038029818313" static="0" type="text"></variable>
+                <event-block sid="518581836016175">
+                    <conditions>
+                        <condition id="0" name="On clicked" sid="810339560385173" type="GenerateButton" />
+                        <condition id="-14" name="Pick by unique ID" sid="259350992399572" type="GenerateButton">
+                            <param id="0" name="Unique ID">40</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="865731137179881" type="Function">
+                            <param id="0" name="Name">&quot;Minuten&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-9" name="Set value" sid="406938256299688" type="System">
+                            <param id="0" name="Variable">Minuten</param>
+                            <param id="1" name="Value">Function.ReturnValue</param>
+                        </action>
+                        <action id="0" name="Call function" sid="639761481038775" type="Function">
+                            <param id="0" name="Name">&quot;Stunden&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-9" name="Set value" sid="469554064450816" type="System">
+                            <param id="0" name="Variable">Stunden</param>
+                            <param id="1" name="Value">Function.ReturnValue</param>
+                        </action>
+                        <action id="0" name="Call function" sid="155322178370773" type="Function">
+                            <param id="0" name="Name">&quot;Tage&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-9" name="Set value" sid="904745478485586" type="System">
+                            <param id="0" name="Variable">Tage</param>
+                            <param id="1" name="Value">Function.ReturnValue</param>
+                        </action>
+                        <action id="0" name="Call function" sid="216596812747147" type="Function">
+                            <param id="0" name="Name">&quot;Monate&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-9" name="Set value" sid="289236869465701" type="System">
+                            <param id="0" name="Variable">Monate</param>
+                            <param id="1" name="Value">Function.ReturnValue</param>
+                        </action>
+                        <action id="0" name="Call function" sid="650892241255619" type="Function">
+                            <param id="0" name="Name">&quot;Wochentag&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-9" name="Set value" sid="503629805764502" type="System">
+                            <param id="0" name="Variable">Wochentag</param>
+                            <param id="1" name="Value">Function.ReturnValue</param>
+                        </action>
+                        <action id="0" name="Call function" sid="282194511274487" type="Function">
+                            <param id="0" name="Name">&quot;UserCheck&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-9" name="Set value" sid="524266280103294" type="System">
+                            <param id="0" name="Variable">UserName</param>
+                            <param id="1" name="Value">Function.ReturnValue</param>
+                        </action>
+                        <action id="0" name="Call function" sid="619437422365940" type="Function">
+                            <param id="0" name="Name">&quot;Commands&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-9" name="Set value" sid="406955031409566" type="System">
+                            <param id="0" name="Variable">Command</param>
+                            <param id="1" name="Value">Function.ReturnValue</param>
+                        </action>
+                        <action id="0" name="Set text" sid="660852021376087" type="Output">
+                            <param id="0" name="Text">Minuten &amp; &quot; &quot; &amp; Stunden &amp; &quot; &quot; &amp; Tage &amp; &quot; &quot; &amp; Monate &amp; &quot; &quot; &amp; Wochentag &amp; &quot; &quot; &amp; UserName &amp; &quot; &quot; &amp; Command</param>
+                        </action>
+                        <action id="0" name="Set text" sid="971392391802311" type="Output2">
+                            <param id="0" name="Text">Output.Text</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="332435012543408">
+                    <conditions>
+                        <condition id="0" name="On function" sid="450471577018543" type="Function">
+                            <param id="0" name="Name">&quot;Minuten&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="798333041073100">
+                            <conditions>
+                                <condition id="0" name="Compare selection" sid="577927504178222" type="Minuten">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Index">-1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="331625311830678">
+                                    <conditions>
+                                        <condition id="0" name="Switch" sid="241412500718104" type="SwitchCase">
+                                            <param id="0" name="Variable">gMinuten</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="186497031875764">
+                                            <conditions>
+                                                <condition id="3" name="Case contains" sid="805469965745181" type="SwitchCase">
+                                                    <param id="0" name="Contains">Minuten.ItemTextAt(0)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set return value" sid="608514523037496" type="Function">
+                                                    <param id="0" name="Value">&quot;*&quot;</param>
+                                                </action>
+                                                <action id="0" name="Break" sid="577152801396175" type="SwitchCase" />
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="813998112861277">
+                                            <conditions>
+                                                <condition id="3" name="Case contains" sid="149180144869015" type="SwitchCase">
+                                                    <param id="0" name="Contains">Minuten.ItemTextAt(1)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set return value" sid="504344913630564" type="Function">
+                                                    <param id="0" name="Value">&quot;*/2&quot;</param>
+                                                </action>
+                                                <action id="0" name="Break" sid="494801663788697" type="SwitchCase" />
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="348058516775711">
+                                            <conditions>
+                                                <condition id="3" name="Case contains" sid="858992641130635" type="SwitchCase">
+                                                    <param id="0" name="Contains">Minuten.ItemTextAt(2)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set return value" sid="363274872092549" type="Function">
+                                                    <param id="0" name="Value">&quot;1-59/2&quot;</param>
+                                                </action>
+                                                <action id="0" name="Break" sid="440891295684827" type="SwitchCase" />
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="555977596957115">
+                                            <conditions>
+                                                <condition id="3" name="Case contains" sid="945893419814560" type="SwitchCase">
+                                                    <param id="0" name="Contains">Minuten.ItemTextAt(3)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set return value" sid="782052393137368" type="Function">
+                                                    <param id="0" name="Value">&quot;*/5&quot;</param>
+                                                </action>
+                                                <action id="0" name="Break" sid="662929787034761" type="SwitchCase" />
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="317907188350481">
+                                            <conditions>
+                                                <condition id="3" name="Case contains" sid="193949488035532" type="SwitchCase">
+                                                    <param id="0" name="Contains">Minuten.ItemTextAt(4)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set return value" sid="553995505827348" type="Function">
+                                                    <param id="0" name="Value">&quot;*/15&quot;</param>
+                                                </action>
+                                                <action id="0" name="Break" sid="945437510558079" type="SwitchCase" />
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="982125937177810">
+                                            <conditions>
+                                                <condition id="3" name="Case contains" sid="372047131868915" type="SwitchCase">
+                                                    <param id="0" name="Contains">Minuten.ItemTextAt(5)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set return value" sid="236060021478074" type="Function">
+                                                    <param id="0" name="Value">&quot;*/30&quot;</param>
+                                                </action>
+                                                <action id="0" name="Break" sid="816294331678123" type="SwitchCase" />
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="830737090878767">
+                                            <conditions>
+                                                <condition id="3" name="Case contains" sid="205788087976656" type="SwitchCase">
+                                                    <param id="0" name="Contains">Minuten.ItemTextAt(6)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set return value" sid="861869864752741" type="Function">
+                                                    <param id="0" name="Value">&quot;*/45&quot;</param>
+                                                </action>
+                                                <action id="0" name="Break" sid="437906988257520" type="SwitchCase" />
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="500311616344183">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="580952051197519" type="System" />
+                                <condition id="0" name="Compare selection" sid="642083805315569" type="Minuten2">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Index">-1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="832317390467253" type="Function">
+                                    <param id="0" name="Value">Minuten2.SelectedText</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="501810802399673">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="788019018313586" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set selection" sid="791309176582979" type="Minuten">
+                                    <param id="0" name="Index">-1</param>
+                                </action>
+                                <action id="1" name="Set return value" sid="728179190540829" type="Function">
+                                    <param id="0" name="Value">&quot;*&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="460405310134075">
+                    <conditions>
+                        <condition id="0" name="On function" sid="577819838526039" type="Function">
+                            <param id="0" name="Name">&quot;Stunden&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="535306612601813">
+                            <conditions>
+                                <condition id="0" name="Compare selection" sid="716636556043370" type="Stunden">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Index">-1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="957976886565933">
+                                    <conditions>
+                                        <condition id="0" name="Switch" sid="827181956323244" type="SwitchCase">
+                                            <param id="0" name="Variable">gStunden</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="771869957863718">
+                                            <conditions>
+                                                <condition id="3" name="Case contains" sid="515010085120269" type="SwitchCase">
+                                                    <param id="0" name="Contains">Stunden.ItemTextAt(0)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set return value" sid="914571780785909" type="Function">
+                                                    <param id="0" name="Value">&quot;*&quot;</param>
+                                                </action>
+                                                <action id="0" name="Break" sid="297091290827015" type="SwitchCase" />
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="617108385614297">
+                                            <conditions>
+                                                <condition id="3" name="Case contains" sid="477331692845664" type="SwitchCase">
+                                                    <param id="0" name="Contains">Stunden.ItemTextAt(1)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set return value" sid="616397270984186" type="Function">
+                                                    <param id="0" name="Value">&quot;*/2&quot;</param>
+                                                </action>
+                                                <action id="0" name="Break" sid="903078584801539" type="SwitchCase" />
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="225270913538908">
+                                            <conditions>
+                                                <condition id="3" name="Case contains" sid="430263427897019" type="SwitchCase">
+                                                    <param id="0" name="Contains">Stunden.ItemTextAt(2)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set return value" sid="429123304400360" type="Function">
+                                                    <param id="0" name="Value">&quot;1-23/2&quot;</param>
+                                                </action>
+                                                <action id="0" name="Break" sid="409377184718069" type="SwitchCase" />
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="698532117730464">
+                                            <conditions>
+                                                <condition id="3" name="Case contains" sid="175742213390760" type="SwitchCase">
+                                                    <param id="0" name="Contains">Stunden.ItemTextAt(3)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set return value" sid="731936668743782" type="Function">
+                                                    <param id="0" name="Value">&quot;*/3&quot;</param>
+                                                </action>
+                                                <action id="0" name="Break" sid="388885580807165" type="SwitchCase" />
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="531449908811018">
+                                            <conditions>
+                                                <condition id="3" name="Case contains" sid="180559105461453" type="SwitchCase">
+                                                    <param id="0" name="Contains">Stunden.ItemTextAt(4)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set return value" sid="922145994404880" type="Function">
+                                                    <param id="0" name="Value">&quot;*/6&quot;</param>
+                                                </action>
+                                                <action id="0" name="Break" sid="140288579699724" type="SwitchCase" />
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="773211880653572">
+                                            <conditions>
+                                                <condition id="3" name="Case contains" sid="463203404786328" type="SwitchCase">
+                                                    <param id="0" name="Contains">Stunden.ItemTextAt(5)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set return value" sid="312930097803595" type="Function">
+                                                    <param id="0" name="Value">&quot;*/12&quot;</param>
+                                                </action>
+                                                <action id="0" name="Break" sid="383066041846996" type="SwitchCase" />
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="417152624578511">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="126273034293292" type="System" />
+                                <condition id="0" name="Compare selection" sid="893578806512790" type="Stunden2">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Index">-1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="865821944343401" type="Function">
+                                    <param id="0" name="Value">Stunden2.SelectedText</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="241531247335494">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="554773815343250" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set selection" sid="325680807934555" type="Stunden">
+                                    <param id="0" name="Index">-1</param>
+                                </action>
+                                <action id="1" name="Set return value" sid="506581340874415" type="Function">
+                                    <param id="0" name="Value">&quot;*&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="556230419462046">
+                    <conditions>
+                        <condition id="0" name="On function" sid="291315025853678" type="Function">
+                            <param id="0" name="Name">&quot;Tage&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="820569374930083">
+                            <conditions>
+                                <condition id="0" name="Compare selection" sid="156569475818869" type="Tage">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Index">-1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="247848525457369">
+                                    <conditions>
+                                        <condition id="0" name="Switch" sid="567659306987357" type="SwitchCase">
+                                            <param id="0" name="Variable">gTage</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="279159646022146">
+                                            <conditions>
+                                                <condition id="3" name="Case contains" sid="634025539401642" type="SwitchCase">
+                                                    <param id="0" name="Contains">Tage.ItemTextAt(0)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set return value" sid="761963591974814" type="Function">
+                                                    <param id="0" name="Value">&quot;*&quot;</param>
+                                                </action>
+                                                <action id="0" name="Break" sid="202483790442982" type="SwitchCase" />
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="333485812940596">
+                                            <conditions>
+                                                <condition id="3" name="Case contains" sid="685950647732781" type="SwitchCase">
+                                                    <param id="0" name="Contains">Tage.ItemTextAt(1)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set return value" sid="563898629272458" type="Function">
+                                                    <param id="0" name="Value">&quot;*/2&quot;</param>
+                                                </action>
+                                                <action id="0" name="Break" sid="455704739118458" type="SwitchCase" />
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="222081592686185">
+                                            <conditions>
+                                                <condition id="3" name="Case contains" sid="162978867430429" type="SwitchCase">
+                                                    <param id="0" name="Contains">Tage.ItemTextAt(2)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set return value" sid="742768264688958" type="Function">
+                                                    <param id="0" name="Value">&quot;1-31/2&quot;</param>
+                                                </action>
+                                                <action id="0" name="Break" sid="658104916071842" type="SwitchCase" />
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="276183126586960">
+                                            <conditions>
+                                                <condition id="3" name="Case contains" sid="170862164340067" type="SwitchCase">
+                                                    <param id="0" name="Contains">Tage.ItemTextAt(3)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set return value" sid="996508157981585" type="Function">
+                                                    <param id="0" name="Value">&quot;*/5&quot;</param>
+                                                </action>
+                                                <action id="0" name="Break" sid="105329772986999" type="SwitchCase" />
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="568562456270855">
+                                            <conditions>
+                                                <condition id="3" name="Case contains" sid="572947609327454" type="SwitchCase">
+                                                    <param id="0" name="Contains">Tage.ItemTextAt(4)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set return value" sid="891741050350599" type="Function">
+                                                    <param id="0" name="Value">&quot;*/10&quot;</param>
+                                                </action>
+                                                <action id="0" name="Break" sid="766064915090374" type="SwitchCase" />
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="819066457910218">
+                                            <conditions>
+                                                <condition id="3" name="Case contains" sid="520231550430789" type="SwitchCase">
+                                                    <param id="0" name="Contains">Tage.ItemTextAt(5)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set return value" sid="932711729989951" type="Function">
+                                                    <param id="0" name="Value">&quot;*/15&quot;</param>
+                                                </action>
+                                                <action id="0" name="Break" sid="531543942647651" type="SwitchCase" />
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="497243618615654">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="397950985002846" type="System" />
+                                <condition id="0" name="Compare selection" sid="240353519721855" type="Tage2">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Index">-1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="888793035411483" type="Function">
+                                    <param id="0" name="Value">Tage2.SelectedText</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="828362273638397">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="425264964602191" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set selection" sid="652355430172514" type="Tage">
+                                    <param id="0" name="Index">-1</param>
+                                </action>
+                                <action id="1" name="Set return value" sid="952819233617638" type="Function">
+                                    <param id="0" name="Value">&quot;*&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="221965225220249">
+                    <conditions>
+                        <condition id="0" name="On function" sid="550098164396176" type="Function">
+                            <param id="0" name="Name">&quot;Monate&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="702405941164755">
+                            <conditions>
+                                <condition id="0" name="Compare selection" sid="198364674016428" type="Monate">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Index">-1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="191804392063713">
+                                    <conditions>
+                                        <condition id="0" name="Switch" sid="908850618086328" type="SwitchCase">
+                                            <param id="0" name="Variable">gMonate</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="468643794202592">
+                                            <conditions>
+                                                <condition id="3" name="Case contains" sid="187864309408697" type="SwitchCase">
+                                                    <param id="0" name="Contains">Monate.ItemTextAt(0)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set return value" sid="553700927987447" type="Function">
+                                                    <param id="0" name="Value">&quot;*&quot;</param>
+                                                </action>
+                                                <action id="0" name="Break" sid="525646743329476" type="SwitchCase" />
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="731516322606615">
+                                            <conditions>
+                                                <condition id="3" name="Case contains" sid="679009672427856" type="SwitchCase">
+                                                    <param id="0" name="Contains">Monate.ItemTextAt(1)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set return value" sid="986034050228933" type="Function">
+                                                    <param id="0" name="Value">&quot;*/2&quot;</param>
+                                                </action>
+                                                <action id="0" name="Break" sid="119394187594306" type="SwitchCase" />
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="395879028259145">
+                                            <conditions>
+                                                <condition id="3" name="Case contains" sid="811164249188139" type="SwitchCase">
+                                                    <param id="0" name="Contains">Monate.ItemTextAt(2)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set return value" sid="875708031368828" type="Function">
+                                                    <param id="0" name="Value">&quot;1-11/2&quot;</param>
+                                                </action>
+                                                <action id="0" name="Break" sid="299475808110683" type="SwitchCase" />
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="377707183284951">
+                                            <conditions>
+                                                <condition id="3" name="Case contains" sid="398508309039752" type="SwitchCase">
+                                                    <param id="0" name="Contains">Monate.ItemTextAt(3)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set return value" sid="969513357589415" type="Function">
+                                                    <param id="0" name="Value">&quot;*/3&quot;</param>
+                                                </action>
+                                                <action id="0" name="Break" sid="210087506496096" type="SwitchCase" />
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="408722323739927">
+                                            <conditions>
+                                                <condition id="3" name="Case contains" sid="669664865955910" type="SwitchCase">
+                                                    <param id="0" name="Contains">Monate.ItemTextAt(4)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set return value" sid="622686528553445" type="Function">
+                                                    <param id="0" name="Value">&quot;*/4&quot;</param>
+                                                </action>
+                                                <action id="0" name="Break" sid="347123617906282" type="SwitchCase" />
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="432031053204021">
+                                            <conditions>
+                                                <condition id="3" name="Case contains" sid="979306555533080" type="SwitchCase">
+                                                    <param id="0" name="Contains">Monate.ItemTextAt(5)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set return value" sid="417624505169761" type="Function">
+                                                    <param id="0" name="Value">&quot;*/6&quot;</param>
+                                                </action>
+                                                <action id="0" name="Break" sid="111037180079054" type="SwitchCase" />
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="997461625360384">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="492171510228593" type="System" />
+                                <condition id="0" name="Compare selection" sid="306581525279721" type="Monate2">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Index">-1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="511224892848745" type="Function">
+                                    <param id="0" name="Value">Monate2.SelectedIndex + 1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="337828149609479">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="884232299573046" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set selection" sid="406251430336325" type="Monate">
+                                    <param id="0" name="Index">-1</param>
+                                </action>
+                                <action id="1" name="Set return value" sid="580712083550185" type="Function">
+                                    <param id="0" name="Value">&quot;*&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="565069278222635">
+                    <conditions>
+                        <condition id="0" name="On function" sid="987810599875807" type="Function">
+                            <param id="0" name="Name">&quot;Wochentag&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="794458138151739">
+                            <conditions>
+                                <condition id="0" name="Compare selection" sid="358235811871619" type="Wochentage">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Index">-1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="504889915169572">
+                                    <conditions>
+                                        <condition id="0" name="Switch" sid="454440416707317" type="SwitchCase">
+                                            <param id="0" name="Variable">gWochentag</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="841296237972880">
+                                            <conditions>
+                                                <condition id="3" name="Case contains" sid="569457067259667" type="SwitchCase">
+                                                    <param id="0" name="Contains">Wochentage.ItemTextAt(0)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set return value" sid="661039514472867" type="Function">
+                                                    <param id="0" name="Value">&quot;*&quot;</param>
+                                                </action>
+                                                <action id="0" name="Break" sid="688666033298512" type="SwitchCase" />
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="486007224221435">
+                                            <conditions>
+                                                <condition id="3" name="Case contains" sid="537169748860168" type="SwitchCase">
+                                                    <param id="0" name="Contains">Wochentage.ItemTextAt(1)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set return value" sid="263586815578961" type="Function">
+                                                    <param id="0" name="Value">&quot;1-5&quot;</param>
+                                                </action>
+                                                <action id="0" name="Break" sid="500447812524882" type="SwitchCase" />
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="428018089726339">
+                                            <conditions>
+                                                <condition id="3" name="Case contains" sid="613528108599052" type="SwitchCase">
+                                                    <param id="0" name="Contains">Wochentage.ItemTextAt(2)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set return value" sid="247203029028754" type="Function">
+                                                    <param id="0" name="Value">&quot;0,6&quot;</param>
+                                                </action>
+                                                <action id="0" name="Break" sid="566675193207233" type="SwitchCase" />
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="865305239718464">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="965474448262262" type="System" />
+                                <condition id="0" name="Compare selection" sid="135922666429129" type="Wochentage2">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Index">-1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="512753575348640" type="Function">
+                                    <param id="0" name="Value">Wochentage2.SelectedIndex</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="345076561360255">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="906366741455911" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set selection" sid="949837892125809" type="Wochentage">
+                                    <param id="0" name="Index">-1</param>
+                                </action>
+                                <action id="1" name="Set return value" sid="535087145279903" type="Function">
+                                    <param id="0" name="Value">&quot;*&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="325008316644264">
+                    <conditions>
+                        <condition id="0" name="On function" sid="988422006097385" type="Function">
+                            <param id="0" name="Name">&quot;UserCheck&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="287815366634793">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="502880231961561" type="System">
+                                    <param id="0" name="First value">len(UserName.Text)</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="114889418479388" type="Function">
+                                    <param id="0" name="Value">UserName.Text</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="578978871274235">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="763827163855003" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="191728099454289" type="Function">
+                                    <param id="0" name="Value">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="657938859848527">
+                    <conditions>
+                        <condition id="0" name="On function" sid="693175184242888" type="Function">
+                            <param id="0" name="Name">&quot;Commands&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="697206282720779">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="496691986770643" type="System">
+                                    <param id="0" name="First value">len(Command.Text)</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="167990922450665" type="Function">
+                                    <param id="0" name="Value">Command.Text &amp; &quot; &gt;/dev/null 2&gt;&amp;1&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="370887713195697">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="374509520545815" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="504645253411989" type="Function">
+                                    <param id="0" name="Value">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="715589511489996" title="Bug Report">
+            <sub-events>
+                <event-block sid="557548007928248">
+                    <conditions>
+                        <condition id="0" name="On clicked" sid="541839906610088" type="GenerateButton" />
+                        <condition id="-14" name="Pick by unique ID" sid="526835541504994" type="GenerateButton">
+                            <param id="0" name="Unique ID">51</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="8" name="Open URL in new window" sid="629444391533455" type="Browser">
+                            <param id="0" name="URL">&quot;https://darselx-gaming.ddnss.de/SITES/bugtracker/index.php?do=newtask&amp;project=6&quot;</param>
+                            <param id="1" name="Tag">&quot;Bug Report&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

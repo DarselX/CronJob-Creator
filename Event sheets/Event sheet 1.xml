@@ -1134,7 +1134,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="715589511489996" title="Bug Report">
+        <event-group description="" sid="715589511489996" title="Bug Report / Github">
             <sub-events>
                 <event-block sid="557548007928248">
                     <conditions>
@@ -1147,6 +1147,20 @@
                         <action id="8" name="Open URL in new window" sid="629444391533455" type="Browser">
                             <param id="0" name="URL">&quot;https://darselx-gaming.ddnss.de/SITES/bugtracker/index.php?do=newtask&amp;project=6&quot;</param>
                             <param id="1" name="Tag">&quot;Bug Report&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="829737688842773">
+                    <conditions>
+                        <condition id="0" name="On clicked" sid="474585870834156" type="GenerateButton" />
+                        <condition id="-14" name="Pick by unique ID" sid="645619283130283" type="GenerateButton">
+                            <param id="0" name="Unique ID">53</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="8" name="Open URL in new window" sid="361976753710494" type="Browser">
+                            <param id="0" name="URL">&quot;https://github.com/DarselX/CronJob-Creator&quot;</param>
+                            <param id="1" name="Tag">&quot;Github&quot;</param>
                         </action>
                     </actions>
                 </event-block>
